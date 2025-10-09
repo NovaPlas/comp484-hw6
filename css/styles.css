@@ -1,26 +1,165 @@
-/* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
-*/
+/* =========================================
+   Color Palette
+   - color 1: #3587A4
+   - color 2: #88CCF1
+   - color 3: #D8DDEF
+   - color 4: #0b0b70
+   ========================================= */
 
-/* Global styles 
-------------------------------------*/
+:root {
+  --clr-header-bg:   #3587A4; /* site header */
+  --clr-footer-bg:   #88CCF1; /* site footer */
+  --clr-work-bg:     #88CCF1; /* work exp */
+  --clr-edu-bg:      #D8DDEF; /* education */
+  --clr-edu-text:    #0b0b70; /* education text */
+  --clr-text-dark:   #000000;
+  --clr-text-light:  #ffffff;
+
+  --page-bg:         #ffffff; /* page canvas */
+  --body-bg:         #C1DFF0; /* outer background if you want a frame */
+  --link:            rgb(184,126,84);
+  --link-hover:      rgb(120,97,55);
+
+  --container:       1050px;
+  --space-1:         .5rem;
+  --space-2:         1rem;
+  --space-3:         1.5rem;
+  --space-4:         2rem;
+  --radius:          12px;
+}
+
+/* =============== Global styles =============== */
+header{
+    margin: 2%;
+    padding: 10px 10px 10px;
+}
+html, body {
+  margin: 0;
+  background: var(--body-bg);   /* outer frame color */
+}
+
 body {
-    /*background: lightblue;*/
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+  line-height: 1.8;
+  color: var(--clr-text-dark);
+  background: var(--page-bg);   /* main page canvas */
+  width: 80%;
+  margin: 2.5% auto 0;
+  padding: 2.5% 2.5% 0;
 }
 
 
-/* Header & Footer 
-------------------------------------*/
+
+/* Headings: Dancing Script for personality */
+h1, h2, h3 {
+  font-family: "Dancing Script", cursive;
+  color: rgb(107, 107, 132);
+  line-height: 1.2;
+}
+h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: .4em; color: rgb(0, 29, 77); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600; margin-bottom: .2em; color:#021b2a;}
+h3 { font-size: 1.2rem; font-weight: 600; color:rgb(0, 29, 54);}
+
+p { font-family: "Playwrite US Modern", cursive; }
+
+li{
+    font-family: "Playwrite US Modern", cursive;
+}
 
 
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
 
-/* Work Experience
-------------------------------------*/
+/* =============== Header (scoped) =============== */
+.site-header {
+  background-color: var(--clr-header-bg);
+  color: var(--clr-text-light); /* ensure readable text color */
+  padding: var(--space-4) 0;
+  border-radius: var(--radius);
+}
+.header-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
 
+/* =============== Sections =============== */
+.section-block { padding: var(--space-4) 0; }
 
+/* Work Experience */
+.work-experience {
+  background-color: var(--clr-work-bg);
+  color: var(--clr-text-dark);
+  border-radius: var(--radius);
+  padding:20px;
+}
+.work-experience ul { padding-left: 1.2rem; }
+.work-experience li { margin-bottom: .5rem; }
 
-/* Education
-------------------------------------*/
+/* Education */
+.education {
+  background-color: var(--clr-edu-bg);
+  color: var(--clr-edu-text);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin:2%;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--clr-footer-bg);
+  color: var(--clr-text-dark);
+  text-align: center;
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(0,0,0,.15);
+  border-radius: var(--radius);
+}
+
+/* =============== Legacy styles you kept (optional) =============== */
+pre {
+  font-size: 1.4em;
+  color: white;
+  padding: .5em 1em;
+  border-left: 1em solid #A68048;
+  background: #666;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 80%;
+}
+pre.wrong  { border-left-color: red; }
+pre.correct{ border-left-color: green; }
+
+dt { font-style: italic; font-size: 1.2em; }
+dd { margin-bottom: 1.4em; }
+
+table { margin-top: 1em; }
+caption { margin: 0 0 1em; text-align: left; }
+td, th { padding: 10px; }
+
+.center { text-align: center; }
+
+aside {
+  padding: 1em;
+  background: rgb(83, 104, 138);
+  color: white;
+  margin-bottom: 1em;
+  border-radius: var(--radius);
+}
+
+.headerwrap{
+    width:950px;
+    margin:20px;
+}
+
+.floated{
+    float:left;
+    padding-top:0px;
+    padding-bottom:20px;
+    padding-left:0px;
+    padding-right:20px
+}
