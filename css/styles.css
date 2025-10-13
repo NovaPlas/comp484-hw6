@@ -47,6 +47,7 @@ body {
   width: 80%;
   margin: 2.5% auto 0;
   padding: 2.5% 2.5% 0;
+  padding-bottom: 3%;
 }
 
 
@@ -118,6 +119,7 @@ li{
   padding: var(--space-4) 0;
   border-top: 1px solid rgba(0,0,0,.15);
   border-radius: var(--radius);
+  padding-bottom: 5%;
 }
 
 /* =============== Legacy styles you kept (optional) =============== */
